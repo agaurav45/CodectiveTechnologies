@@ -1,0 +1,26 @@
+<div id="header">
+	<h1>Codective Technologies</h1>
+</div>
+
+<div *ngIf="routeId == 'left'" id="sidebar-left" (drop)="drop($event)" (dragover)="allowDrop($event)">
+	<div draggable="true" (dragstart)="drag($event)" id="circle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="triangle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="rectangle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="square"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="line"></div>
+</div>
+<div id="main" (drop)="drop($event)" (dragover)="allowDrop($event)">
+	<a href="javascript:void(0);" (click)="changePanel()">Change Side View</a>
+</div>
+
+<div *ngIf="routeId == 'right'" id="sidebar-right" (drop)="drop($event)" (dragover)="allowDrop($event)">
+	<div draggable="true" (dragstart)="drag($event)" id="circle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="triangle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="rectangle"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="square"></div>
+	<div draggable="true" (dragstart)="drag($event)" id="line"></div>
+</div>
+
+<div id="footer">
+	<h2>This is my Footer</h2>
+</div>
